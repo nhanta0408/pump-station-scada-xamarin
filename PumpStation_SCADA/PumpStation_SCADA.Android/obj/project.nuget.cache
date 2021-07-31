@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bygL6alKPgRaf5a9rBeKOSKtbNEXjODZ7/3SZVAlqkzzehMDHF4NlZtRO11sTIH5DXvDAqEQ0PU1+wfFIY5CDA==",
+  "dgSpecHash": "qjmQEijdXahyU9r3wTMr0S8YjAvo6sSoG8MQ4Ac35pjZ2bacJEzKVWmJZE1tgZKXZ6YPddyZMLGlLC2qiO96pg==",
   "success": true,
-  "projectFilePath": "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj",
+  "projectFilePath": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nhant\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\plugin.currentactivity\\2.1.0.4\\plugin.currentactivity.2.1.0.4.nupkg.sha512",

@@ -21,7 +21,7 @@ namespace PumpStation_SCADA.Views
         {
             Type = PinType.Place,
             Label = "Pump Station 2",
-            Position = new Position(11.767191866480413, 106.6419228446841),
+            Position = new Position(11.067191866480413, 106.6419228446841),
             Tag = "2",
         };
         public HomeScreen()
@@ -30,7 +30,7 @@ namespace PumpStation_SCADA.Views
                 map.Pins.Add(pinPumpStation1);
                 map.Pins.Add(pinPumpStation2);
                 map.SelectedPinChanged += Map_SelectedPinChanged;
-                map.MoveToRegion(MapSpan.FromCenterAndRadius(pinPumpStation1.Position, Distance.FromMeters(5000)));
+                map.MoveToRegion(MapSpan.FromCenterAndRadius(pinPumpStation1.Position, Distance.FromMeters(10000)));
         }
         private void Map_SelectedPinChanged(object sender, SelectedPinChangedEventArgs e)
         {

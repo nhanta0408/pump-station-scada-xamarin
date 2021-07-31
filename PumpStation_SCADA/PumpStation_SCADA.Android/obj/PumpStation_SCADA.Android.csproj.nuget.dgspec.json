@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj": {}
+    "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj": {}
   },
   "projects": {
-    "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj": {
+    "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj",
+        "projectUniqueName": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj",
         "projectName": "PumpStation_SCADA.Android",
-        "projectPath": "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj",
+        "projectPath": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj",
         "packagesPath": "C:\\Users\\nhant\\.nuget\\packages\\",
-        "outputPath": "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\obj\\",
+        "outputPath": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj": {
-                "projectPath": "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj"
+              "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj": {
+                "projectPath": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj": {
+    "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj",
+        "projectUniqueName": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj",
         "projectName": "PumpStation_SCADA",
-        "projectPath": "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj",
+        "projectPath": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj",
         "packagesPath": "C:\\Users\\nhant\\.nuget\\packages\\",
-        "outputPath": "D:\\Study Document\\PGS202\\SCADA\\CSharpProject\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\obj\\",
+        "outputPath": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",

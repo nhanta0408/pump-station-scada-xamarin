@@ -1,96 +1,101 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="#ffffff"
+            x:Name="myTabbedPage"
              x:Class="PumpStation_SCADA.PumpStationFaceplate">
-  <!--Pages can be added as references or inline-->
-    <ContentPage Title="Control" >
-        <StackLayout Orientation="Vertical" >
-            <BoxView VerticalOptions="Start" HeightRequest="60"/>
+
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Control" IconImageSource="icon_setting.png">
+        <StackLayout Orientation="Vertical">
+            <BoxView VerticalOptions="Start" HeightRequest="60" />
             <Label x:Name="stationTitle" Text="PUMP STATION 1"
                    TextColor="Black"
                    FontSize="35"
                    FontAttributes="Bold"
-                VerticalOptions="Start" 
+                VerticalOptions="Start"
                 HorizontalOptions="Center" />
-            <BoxView VerticalOptions="Start" HeightRequest="30"/>
+            <BoxView VerticalOptions="Start" HeightRequest="30" />
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
                 <Label Text="Mode: "
                        FontSize="25"
-                       VerticalOptions="Start" 
-                       HorizontalOptions="StartAndExpand"/>
-                <Picker WidthRequest="120" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"/>
+                       VerticalOptions="Start"
+                       HorizontalOptions="StartAndExpand" />
+                <Picker WidthRequest="120" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
             </StackLayout>
-            <BoxView  HeightRequest="20"/>
-            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Center" >
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+            <BoxView  HeightRequest="20" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Center">
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
                     <Label Text="Pump 1"
                        FontSize="25"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="Center"/>
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="Center" />
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Orientation="Vertical">
-                            <Button  Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                            <Button Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Button  Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                            <Button Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
                         </StackLayout>
-                        <BoxView WidthRequest="5"/>
+                        <BoxView WidthRequest="5" />
                         <Ellipse Fill="Green"
                                     WidthRequest="60"
                                     HeightRequest="60"
-                                     HorizontalOptions="Center" VerticalOptions="Center"/>
+                                     HorizontalOptions="Center" VerticalOptions="Center" />
                     </StackLayout>
-                    <BoxView HeightRequest="30"/>
+                    <BoxView HeightRequest="30" />
                 </StackLayout>
-                <BoxView HeightRequest="180"  WidthRequest="5" VerticalOptions="Start" HorizontalOptions="Center"/>
-                <BoxView HeightRequest="180"  WidthRequest="1" Color="Black" VerticalOptions="Start" HorizontalOptions="Center"/>
-                <BoxView HeightRequest="180"  WidthRequest="5" VerticalOptions="Start" HorizontalOptions="Center"/>
-                <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                <BoxView HeightRequest="180"  WidthRequest="5" VerticalOptions="Start" HorizontalOptions="Center" />
+                <BoxView HeightRequest="180"  WidthRequest="1" Color="Black" VerticalOptions="Start" HorizontalOptions="Center" />
+                <BoxView HeightRequest="180"  WidthRequest="5" VerticalOptions="Start" HorizontalOptions="Center" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
                     <Label Text="Pump 2"
                        FontSize="25"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="Center"/>
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="Center" />
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Orientation="Vertical">
-                            <Button  Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                            <Button Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Button  Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                            <Button Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
                         </StackLayout>
-                        <BoxView WidthRequest="5"/>
+                        <BoxView WidthRequest="5" />
                         <Ellipse Fill="Green"
                                     WidthRequest="60"
                                     HeightRequest="60"
-                                     HorizontalOptions="Center" VerticalOptions="Center"/>
+                                     HorizontalOptions="Center" VerticalOptions="Center" />
                     </StackLayout>
-                    <BoxView HeightRequest="30"/>
+                    <BoxView HeightRequest="30" />
                 </StackLayout>
             </StackLayout>
-            <BoxView  HeightRequest="20"/>
+            <BoxView  HeightRequest="20" />
             <Label Text="PRESSURE"
                    TextColor="Black"
                    FontSize="25"
                    FontAttributes="Bold"
-                VerticalOptions="Start" 
+                VerticalOptions="Start"
                 HorizontalOptions="Center" />
             <Label Text="8 Pa"
                    TextColor="Black"
                    FontSize="25"
                    FontAttributes="Bold"
-                VerticalOptions="Start" 
+                VerticalOptions="Start"
                 HorizontalOptions="Center" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Alarm" >
+    <ContentPage Title="Alarm" IconImageSource="icon_alarm.png" >
         <Label Text="ALARM "
                    TextColor="Black"
                    FontSize="35"
                    FontAttributes="Bold"
-                VerticalOptions="Start" 
+                VerticalOptions="Start"
                 HorizontalOptions="Center" />
     </ContentPage>
-    <ContentPage Title="Trend">
+    <ContentPage Title="Trend" IconImageSource="icon_graph.png">
         <Label Text="Trend "
                    TextColor="Black"
                    FontSize="35"
                    FontAttributes="Bold"
-                VerticalOptions="Start" 
+                VerticalOptions="Start"
                 HorizontalOptions="Center" />
     </ContentPage>
 </TabbedPage>

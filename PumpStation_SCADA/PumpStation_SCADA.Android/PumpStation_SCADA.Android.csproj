@@ -102,5 +102,11 @@
       <Name>PumpStation_SCADA</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_alarm.png" />
+    <AndroidResource Include="Resources\drawable\icon_setting.png" />
+    <Content Include="Resources\drawable\icon_home.png" />
+    <AndroidResource Include="Resources\drawable\icon_graph.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

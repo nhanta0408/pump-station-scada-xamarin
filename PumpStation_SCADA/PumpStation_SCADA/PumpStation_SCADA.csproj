@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <Reference Include="S7.Net">
-      <HintPath>..\..\..\MySCADA\MySCADA\bin\Debug\S7.Net.dll</HintPath>
+      <HintPath>..\..\..\CSharpProject\MySCADA\MySCADA\bin\Debug\S7.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
 
