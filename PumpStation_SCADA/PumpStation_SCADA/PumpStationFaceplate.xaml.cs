@@ -1,7 +1,11 @@
-﻿using MySCADA;
+﻿using Microcharts;
+using MySCADA;
+using SkiaSharp;
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Entry = Microcharts.ChartEntry;
 
 namespace PumpStation_SCADA
 {
@@ -11,7 +15,10 @@ namespace PumpStation_SCADA
         private int _index;
         public SCADA Parent;
         private bool pausedReadMode;
+        private List<Entry> entries = new List<Entry>
+        {
 
+        };
         public PumpStationFaceplate(int index)
         {
             InitializeComponent();
@@ -22,6 +29,23 @@ namespace PumpStation_SCADA
             modePicker.Items.Add("Manual");
             pausedReadMode = false;
 
+            pressureTrend.Chart = new LineChart
+            {
+                Entries = entries,
+                LineMode = LineMode.Straight,
+                MaxValue = 10,
+                MinValue = 0,
+                LabelTextSize = 45,
+                LabelOrientation = Orientation.Vertical,
+                ValueLabelOrientation = Orientation.Vertical,
+                PointMode = PointMode.Circle,
+            };
+
+            pressureTrend.Chart.IsAnimated = false;
+            int _preRear = 0;
+            Historian pressureHistorian = App.Root.FindHistorian($"pressureHistorian_{_index}");
+            Historian pressureTimestampHistorian = App.Root.FindHistorian($"pressureTimestampHistorian_{_index}");
+            bool firstScan = true;
             Xamarin.Forms.Device.StartTimer(TimeSpan.FromSeconds(1), () =>
             {
                 MySCADA.Task task = App.Root.FindTask("Task_1");
@@ -66,6 +90,38 @@ namespace PumpStation_SCADA
                     {
                         float _pressure = tagPressure.Value;
                         pressureText.Text = _pressure.ToString() + " bar";
+
+                        if (_preRear != pressureHistorian.ringBuffer.rear)
+                        {
+                            float currentPressure = pressureHistorian.ringBuffer.Peek();
+                            DateTime currentTimestamp = pressureTimestampHistorian.ringBuffer.Peek();
+                            if (entries.Count > 40)
+                            {
+                                entries.RemoveAt(0);
+                            }
+                            if (pressureHistorian.ringBuffer.rear % 10 == 0 || firstScan)
+                            {
+                                entries.Add(new Entry(currentPressure)
+                                {
+                                    Label = currentTimestamp.ToString("HH:mm:ss"),
+                                    ValueLabel = currentPressure.ToString(),
+                                    Color = SKColor.Parse("#0033cc"),
+                                    TextColor = SKColor.Parse("#000000"),
+                                });
+                            }
+                            else
+                            {
+                                entries.Add(new Entry(currentPressure)
+                                {
+                                    TextColor = SKColor.Parse("#000000"),
+                                });
+                            }
+
+                            pressureTrend.Chart.Entries = entries;
+                            _preRear = pressureHistorian.ringBuffer.rear;
+                        }
+                        firstScan = false;
+
                     }
                     if (tagRunning1 != null)
                     {

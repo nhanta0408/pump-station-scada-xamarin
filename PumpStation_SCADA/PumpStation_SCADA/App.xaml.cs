@@ -110,6 +110,22 @@ namespace PumpStation_SCADA
             Root.RunTask("Task_1");
 
             //mainScreen = new MainScreen();
+            Historian pressureHistorian1 = new Historian("pressureHistorian_1", 50);
+            Historian pressureHistorian2 = new Historian("pressureHistorian_2", 50);
+            Historian pressureHistorian3 = new Historian("pressureHistorian_3", 50);
+
+            Root.AddHistorian(pressureHistorian1);
+            Root.AddHistorian(pressureHistorian2);
+            Root.AddHistorian(pressureHistorian3);
+
+            Historian pressureTimestampHistorian1 = new Historian("pressureTimestampHistorian_1", 50);
+            Historian pressureTimestampHistorian2 = new Historian("pressureTimestampHistorian_2", 50);
+            Historian pressureTimestampHistorian3 = new Historian("pressureTimestampHistorian_3", 50);
+
+            Root.AddHistorian(pressureTimestampHistorian1);
+            Root.AddHistorian(pressureTimestampHistorian2);
+            Root.AddHistorian(pressureTimestampHistorian3); 
+
 
             PumpStationFaceplate pumpStation_1 = new PumpStationFaceplate(1);
             PumpStationFaceplate pumpStation_2 = new PumpStationFaceplate(2);
@@ -119,10 +135,7 @@ namespace PumpStation_SCADA
             Root.AddFaceplate(pumpStation_2);
             Root.AddFaceplate(pumpStation_3);
 
-            //Historian levelHistorian = new Historian("Level", 50);
-            //Root.AddHistorian(levelHistorian);
-            //Historian levelTimestampHistorian = new Historian("LevelTimestamp", 8000);
-            //Root.AddHistorian(levelTimestampHistorian);
+            
 
             //Alarm levelAlarm = new Alarm("Level");
             //Root.AddAlarm(levelAlarm);

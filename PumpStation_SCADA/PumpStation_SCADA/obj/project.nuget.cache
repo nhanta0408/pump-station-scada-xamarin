@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "FrVX6Yn+Ve5lvuDQbYJfMCjpgaSYU1QoKfGRxaQXWLKODWBUqPyXEzvEsnYeZFZTX2/SrAP/sTBOSUUti82GEw==",
+  "dgSpecHash": "MdSw+yeOtfO+HVBLhEmgS+KGRUgoJI6qMqPRHEBf21574r2HQSc/8mWaU/hfHPdJ8mcRBUO8djyxjlCsgqxwKg==",
   "success": true,
   "projectFilePath": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nhant\\.nuget\\packages\\microcharts\\0.9.5.9\\microcharts.0.9.5.9.nupkg.sha512",
+    "C:\\Users\\nhant\\.nuget\\packages\\microcharts.forms\\0.9.5.9\\microcharts.forms.0.9.5.9.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
+    "C:\\Users\\nhant\\.nuget\\packages\\skiasharp.views.forms\\2.80.2\\skiasharp.views.forms.2.80.2.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

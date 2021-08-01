@@ -103,25 +103,25 @@ namespace MySCADA
             }
         }
 
-       
-        //public void AddHistorian(Historian historian)
-        //{
-        //    historian.Parent = this;
-        //    Historians.Add(historian);
-        //}
-        //public Historian FindHistorian(string name)
-        //{
-        //    Historian result = null;
-        //    foreach (var item in Historians)
-        //    {
-        //        var temp = (Historian)item;
-        //        if (temp.Name == name)
-        //        {
-        //            result = temp;
-        //        }
-        //    }
-        //    return result;
-        //}
+
+        public void AddHistorian(Historian historian)
+        {
+            historian.Parent = this;
+            Historians.Add(historian);
+        }
+        public Historian FindHistorian(string name)
+        {
+            Historian result = null;
+            foreach (var item in Historians)
+            {
+                var temp = (Historian)item;
+                if (temp.Name == name)
+                {
+                    result = temp;
+                }
+            }
+            return result;
+        }
         //Khong biet co xai Grap ko?
         //public void AddGraph(LevelGraph levelGraph)
         //{

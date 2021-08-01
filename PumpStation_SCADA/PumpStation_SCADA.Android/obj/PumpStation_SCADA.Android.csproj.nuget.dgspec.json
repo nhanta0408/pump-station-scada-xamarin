@@ -42,7 +42,7 @@
       "frameworks": {
         "monoandroid11.0": {
           "dependencies": {
-            "Microcharts": {
+            "Microcharts.Forms": {
               "target": "Package",
               "version": "[0.9.5.9, )"
             },
@@ -111,7 +111,7 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Microcharts": {
+            "Microcharts.Forms": {
               "target": "Package",
               "version": "[0.9.5.9, )"
             },

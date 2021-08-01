@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.CSharp;
-
 
 namespace MySCADA
 {
@@ -48,6 +46,11 @@ namespace MySCADA
         }
         public void Enqueue(dynamic data)
         {
+            bool full = isFull();
+            rear = (rear + 1) % nums.Length; //rear ++ theo kiểu vòng tròn\
+                                             //Bản chất của Enqueue là thêm data, mà thêm là thêm vào rear, tức là chỉ số rear sẽ tăng.
+            count++;
+            nums[rear] = data;
             if (isFull())
             {
                 //Nếu muốn tăng thì tăng, còn không thì có thể NoImplementation
@@ -58,10 +61,7 @@ namespace MySCADA
             {
                 front++; //do empty là front đang = -1, chưa xuất phát -> chưa có dữ liệu trong queue
             }
-            rear = (rear + 1) % nums.Length; //rear ++ theo kiểu vòng tròn\
-                                             //Bản chất của Enqueue là thêm data, mà thêm là thêm vào rear, tức là chỉ số rear sẽ tăng.
-            count++;
-            nums[rear] = data;
+            
         }
         public dynamic Dequeue()
         {
@@ -92,7 +92,7 @@ namespace MySCADA
                 return nums[rear];
             }
         }
-        
+
     }
 
 }

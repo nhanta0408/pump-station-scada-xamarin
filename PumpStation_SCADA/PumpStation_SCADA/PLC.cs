@@ -13,6 +13,7 @@ namespace MySCADA
         public Device PumpStation_2 = new Device(); 
         public Device PumpStation_3 = new Device(); 
         public SCADA Parent;
+        public float pressure1, pressure2, pressure3;
 
         public PLC()
         {
@@ -40,12 +41,25 @@ namespace MySCADA
                 thePLC.ReadClass(PumpStation_2, 2);
                 thePLC.ReadClass(PumpStation_3, 3);
 
-                //level = ((ushort)levelObj).ConvertToShort();
+                pressure1 = PumpStation_1.Pressure;
+                pressure2 = PumpStation_2.Pressure;
+                pressure3 = PumpStation_3.Pressure;
 
-                //Historian levelHistorian = Parent.FindHistorian("Level");
-                //levelHistorian.ringBuffer.Enqueue(Level);
-                //Historian levelTimestampHistorian = Parent.FindHistorian("LevelTimestamp");
-                //levelTimestampHistorian.ringBuffer.Enqueue(DateTime.Now);
+                Historian pressureHistorian1 = Parent.FindHistorian("pressureHistorian_1");
+                Historian pressureHistorian2 = Parent.FindHistorian("pressureHistorian_2");
+                Historian pressureHistorian3 = Parent.FindHistorian("pressureHistorian_3");
+
+                pressureHistorian1.ringBuffer.Enqueue(pressure1);
+                pressureHistorian2.ringBuffer.Enqueue(pressure2);
+                pressureHistorian3.ringBuffer.Enqueue(pressure3);
+
+                Historian pressureTimestampHistorian1 = Parent.FindHistorian("pressureTimestampHistorian_1");
+                Historian pressureTimestampHistorian2 = Parent.FindHistorian("pressureTimestampHistorian_2");
+                Historian pressureTimestampHistorian3 = Parent.FindHistorian("pressureTimestampHistorian_3");
+
+                pressureTimestampHistorian1.ringBuffer.Enqueue(DateTime.Now);
+                pressureTimestampHistorian2.ringBuffer.Enqueue(DateTime.Now);
+                pressureTimestampHistorian3.ringBuffer.Enqueue(DateTime.Now);
 
                 //Alarm levelAlarm = Parent.FindAlarm("Level");
                 //AlarmTag levelAlarmTag = new AlarmTag("Level", DateTime.Now, Level, " "); //Chưa so sánh nên chưa biết alarm code

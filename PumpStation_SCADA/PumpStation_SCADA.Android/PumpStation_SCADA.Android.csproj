@@ -54,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microcharts">
+    <PackageReference Include="Microcharts.Forms">
       <Version>0.9.5.9</Version>
     </PackageReference>
     <PackageReference Include="Plugin.CurrentActivity">
@@ -108,6 +108,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon_alarm.png" />
     <AndroidResource Include="Resources\drawable\icon_setting.png" />
+    <AndroidResource Include="Resources\drawable\axis.png" />
     <Content Include="Resources\drawable\icon_home.png" />
     <AndroidResource Include="Resources\drawable\icon_graph.png" />
   </ItemGroup>

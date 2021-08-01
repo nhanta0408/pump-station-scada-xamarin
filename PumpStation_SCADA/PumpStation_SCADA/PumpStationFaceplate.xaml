@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             BarBackgroundColor="#ffffff"
@@ -27,8 +28,8 @@
             </StackLayout>
             <BoxView  HeightRequest="10" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button x:Name="startBtn" Text="Start" FontAttributes="Bold" FontSize="20" HeightRequest="50" WidthRequest="120" VerticalOptions="CenterAndExpand" Pressed="startBtn_Pressed" Released="startBtn_Released"/>
-                <Button x:Name="stopBtn" Text="Stop" FontAttributes="Bold" FontSize="20" HeightRequest="50" WidthRequest="120" VerticalOptions="CenterAndExpand" Pressed="stopBtn_Pressed" Released="stopBtn_Released"/>
+                <Button x:Name="startBtn" Text="Start" FontAttributes="Bold" FontSize="20" HeightRequest="50" WidthRequest="120" VerticalOptions="CenterAndExpand" Pressed="startBtn_Pressed" Released="startBtn_Released" />
+                <Button x:Name="stopBtn" Text="Stop" FontAttributes="Bold" FontSize="20" HeightRequest="50" WidthRequest="120" VerticalOptions="CenterAndExpand" Pressed="stopBtn_Pressed" Released="stopBtn_Released" />
             </StackLayout>
             <BoxView  HeightRequest="10" />
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Center">
@@ -87,7 +88,7 @@
                 HorizontalOptions="Center" />
         </StackLayout>
     </ContentPage>
-    <ContentPage Title="Alarm" IconImageSource="icon_alarm.png" >
+    <ContentPage Title="Alarm" IconImageSource="icon_alarm.png">
         <StackLayout Orientation="Vertical">
             <BoxView VerticalOptions="Start" HeightRequest="30" />
             <Label Text="ALARM"
@@ -96,7 +97,7 @@
                    FontAttributes="Bold"
                 VerticalOptions="Start"
                 HorizontalOptions="Center" />
-            </StackLayout>
+        </StackLayout>
     </ContentPage>
     <ContentPage Title="Trend" IconImageSource="icon_graph.png">
         <AbsoluteLayout>
@@ -105,7 +106,10 @@
                    FontSize="35"
                    FontAttributes="Bold"
                 VerticalOptions="Start"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                    AbsoluteLayout.LayoutBounds="0.5,0.05,120,60" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <forms:ChartView x:Name ="pressureTrend" AbsoluteLayout.LayoutBounds="0.7,0.75,350,405" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <Image Source="axis.png" Aspect="Fill"  AbsoluteLayout.LayoutBounds="0.7,0.48,390 ,360" AbsoluteLayout.LayoutFlags="PositionProportional" />
         </AbsoluteLayout>
     </ContentPage>
 </TabbedPage>
