@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PumpStation_SCADA;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace MySCADA
     {
         public ArrayList Tasks = new ArrayList();
         public ArrayList MainScreens = new ArrayList();
-        //public List<MotorFaceplate> Motor_faceplates = new List<MotorFaceplate>();
+        public List<PumpStationFaceplate> PumpStationFaceplates = new List<PumpStationFaceplate>();
         public ArrayList Graph = new ArrayList();
         public ArrayList Historians = new ArrayList();
         public ArrayList Alarms = new ArrayList();
@@ -35,11 +36,11 @@ namespace MySCADA
             plc.Parent = this;
             S71500 = plc;
         }
-        //public void AddFaceplate(MotorFaceplate faceplate)
-        //{
-        //    faceplate.parent = this;
-        //    Motor_faceplates.Add(faceplate);
-        //}
+        public void AddFaceplate(PumpStationFaceplate faceplate)
+        {
+            faceplate.Parent = this;
+            PumpStationFaceplates.Add(faceplate);
+        }
         //public void AddMainScreen(MainScreen mainScreen)
         //{
         //    //mainScreen.parent = this;

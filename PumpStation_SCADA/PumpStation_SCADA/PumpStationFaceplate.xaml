@@ -19,11 +19,11 @@
                 HorizontalOptions="Center" />
             <BoxView VerticalOptions="Start" HeightRequest="30" />
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
-                <Label Text="Mode: "
+                <Label  Text="Mode: "
                        FontSize="25"
                        VerticalOptions="Start"
                        HorizontalOptions="StartAndExpand" />
-                <Picker WidthRequest="120" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
+                <Picker x:Name="modePicker" SelectedIndexChanged="modePicker_SelectedIndexChanged" WidthRequest="120" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
             </StackLayout>
             <BoxView  HeightRequest="20" />
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Center">
@@ -34,11 +34,11 @@
                        HorizontalOptions="Center" />
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Orientation="Vertical">
-                            <Button  Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-                            <Button Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                            <Button x:Name="start1Btn" Pressed="start1Btn_Pressed" Released="start1Btn_Released" Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                            <Button x:Name="stop1Btn" Pressed="stop1Btn_Pressed" Released="stop1Btn_Released" Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
                         </StackLayout>
                         <BoxView WidthRequest="5" />
-                        <Ellipse Fill="Green"
+                        <Ellipse x:Name="running1Ellipse" Fill="Green"
                                     WidthRequest="60"
                                     HeightRequest="60"
                                      HorizontalOptions="Center" VerticalOptions="Center" />
@@ -55,11 +55,11 @@
                        HorizontalOptions="Center" />
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Orientation="Vertical">
-                            <Button  Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-                            <Button Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                            <Button x:Name="start2Btn" Pressed="start2Btn_Pressed" Released="start2Btn_Released" Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                            <Button x:Name="stop2Btn" Pressed="stop2Btn_Pressed" Released ="stop2Btn_Released" Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
                         </StackLayout>
                         <BoxView WidthRequest="5" />
-                        <Ellipse Fill="Green"
+                        <Ellipse x:Name="running2Ellipse" Fill="Green"
                                     WidthRequest="60"
                                     HeightRequest="60"
                                      HorizontalOptions="Center" VerticalOptions="Center" />
@@ -74,7 +74,7 @@
                    FontAttributes="Bold"
                 VerticalOptions="Start"
                 HorizontalOptions="Center" />
-            <Label Text="8 Pa"
+            <Label x:Name="pressureText" Text="8 Pa"
                    TextColor="Black"
                    FontSize="25"
                    FontAttributes="Bold"

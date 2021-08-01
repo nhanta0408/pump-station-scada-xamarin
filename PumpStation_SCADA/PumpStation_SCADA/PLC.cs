@@ -12,8 +12,6 @@ namespace MySCADA
         public Device PumpStation_1 = new Device(); 
         public Device PumpStation_2 = new Device(); 
         public Device PumpStation_3 = new Device(); 
-        public bool StartAuto;
-        public bool StopAuto;
         public SCADA Parent;
 
         public PLC()
