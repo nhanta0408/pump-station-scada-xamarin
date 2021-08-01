@@ -44,13 +44,28 @@ namespace PumpStation_SCADA
                         if (modePicker.IsFocused == false && !pausedReadMode)
                         {
                             modePicker.SelectedIndex = autoManual ? 1 : 0;
+
+                            
                         }
+                        startBtn.BackgroundColor = autoManual ? Color.Gray : Color.DarkGreen;
+                        stopBtn.BackgroundColor = autoManual ? Color.Gray : Color.DarkRed;
+                        start1Btn.BackgroundColor = autoManual ? Color.DarkGreen : Color.Gray;
+                        stop1Btn.BackgroundColor = autoManual ? Color.DarkRed : Color.Gray;
+                        start2Btn.BackgroundColor = autoManual ? Color.DarkGreen : Color.Gray;
+                        stop2Btn.BackgroundColor = autoManual ? Color.DarkRed : Color.Gray;
+
+                        startBtn.IsEnabled = !autoManual;
+                        stopBtn.IsEnabled = !autoManual;
+                        start1Btn.IsEnabled = autoManual;
+                        stop1Btn.IsEnabled = autoManual;
+                        start2Btn.IsEnabled = autoManual;
+                        stop2Btn.IsEnabled = autoManual;
                     }
 
                     if (tagPressure != null)
                     {
                         float _pressure = tagPressure.Value;
-                        pressureText.Text = _pressure.ToString();
+                        pressureText.Text = _pressure.ToString() + " bar";
                     }
                     if (tagRunning1 != null)
                     {
@@ -70,15 +85,19 @@ namespace PumpStation_SCADA
 
         private void modePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
+            bool autoManual;
             pausedReadMode = true;
             if (modePicker.SelectedIndex == 0)
             {
+                autoManual = false;
                 Parent.S71500.WriteBool($"DB{_index}.DBX0.0", false);
             }
             else
             {
+                autoManual = true;
                 Parent.S71500.WriteBool($"DB{_index}.DBX0.0", true);
             }
+            
         }
 
         private void start1Btn_Pressed(object sender, EventArgs e)
@@ -119,6 +138,28 @@ namespace PumpStation_SCADA
         private void stop2Btn_Released(object sender, EventArgs e)
         {
             Parent.S71500.WriteBool($"DB{_index}.DBX0.4", false);
+        }
+
+        private void startBtn_Pressed(object sender, EventArgs e)
+        {
+            Parent.S71500.WriteBool($"DB{_index}.DBX0.5", true);
+        }
+
+        private void startBtn_Released(object sender, EventArgs e)
+        {
+            Parent.S71500.WriteBool($"DB{_index}.DBX0.5", false);
+        }
+
+        private void stopBtn_Pressed(object sender, EventArgs e)
+        {
+            Parent.S71500.WriteBool($"DB{_index}.DBX0.6", true);
+
+        }
+
+        private void stopBtn_Released(object sender, EventArgs e)
+        {
+            Parent.S71500.WriteBool($"DB{_index}.DBX0.6", false);
+
         }
     }
 }

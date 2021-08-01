@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "qjmQEijdXahyU9r3wTMr0S8YjAvo6sSoG8MQ4Ac35pjZ2bacJEzKVWmJZE1tgZKXZ6YPddyZMLGlLC2qiO96pg==",
+  "dgSpecHash": "HKd2Wx66gEVQCRTp+MYhOcg8bZDMV5IV/TA58UpnnOirJ17v9efiQ3fb5MY7n9Gh7AlwKZNRPkFXjG2hQwNz1Q==",
   "success": true,
   "projectFilePath": "D:\\Study Document\\PGS202\\SCADA\\PumpStation_SCADA\\PumpStation_SCADA\\PumpStation_SCADA.Android\\PumpStation_SCADA.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nhant\\.nuget\\packages\\microcharts\\0.9.5.9\\microcharts.0.9.5.9.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\plugin.currentactivity\\2.1.0.4\\plugin.currentactivity.2.1.0.4.nupkg.sha512",
+    "C:\\Users\\nhant\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
+    "C:\\Users\\nhant\\.nuget\\packages\\skiasharp.views\\2.80.2\\skiasharp.views.2.80.2.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\xamarin.android.support.animated.vector.drawable\\26.0.2\\xamarin.android.support.animated.vector.drawable.26.0.2.nupkg.sha512",
     "C:\\Users\\nhant\\.nuget\\packages\\xamarin.android.support.annotations\\26.0.2\\xamarin.android.support.annotations.26.0.2.nupkg.sha512",

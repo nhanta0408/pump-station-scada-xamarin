@@ -10,7 +10,7 @@ namespace PumpStation_SCADA.Views
             Type = PinType.Place,
             Label = "Pump Station 1",
             Position = new Position(10.766024390958751, 106.64286302830324),
-            Tag = "1",
+            Tag = "1",          
         };
 
         private Pin pinPumpStation2 = new Pin()
@@ -25,7 +25,7 @@ namespace PumpStation_SCADA.Views
         {
             Type = PinType.Place,
             Label = "Pump Station 3",
-            Position = new Position(10.800191866480413, 106.4419228446841),
+            Position = new Position(10.800191866480413, 106.5419228446841),
             Tag = "3",
         };
 
@@ -36,7 +36,7 @@ namespace PumpStation_SCADA.Views
             map.Pins.Add(pinPumpStation2);
             map.Pins.Add(pinPumpStation3);
             map.SelectedPinChanged += Map_SelectedPinChanged;
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(pinPumpStation1.Position, Distance.FromMeters(20000)));
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(pinPumpStation1.Position, Distance.FromMeters(30000)));
         }
 
         private void Map_SelectedPinChanged(object sender, SelectedPinChangedEventArgs e)
