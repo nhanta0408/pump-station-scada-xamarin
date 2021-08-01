@@ -1,8 +1,11 @@
 ﻿using Microcharts;
 using MySCADA;
+using MySCADA_Xamarin;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Entry = Microcharts.ChartEntry;
@@ -15,6 +18,10 @@ namespace PumpStation_SCADA
         private int _index;
         public SCADA Parent;
         private bool pausedReadMode;
+
+        public ObservableCollection<AlarmTag> ItemList { get; set; }
+        public ObservableCollection<AlarmTag> alarmtags { get; set; }
+
         private List<Entry> entries = new List<Entry>
         {
 
@@ -46,6 +53,10 @@ namespace PumpStation_SCADA
             Historian pressureHistorian = App.Root.FindHistorian($"pressureHistorian_{_index}");
             Historian pressureTimestampHistorian = App.Root.FindHistorian($"pressureTimestampHistorian_{_index}");
             bool firstScan = true;
+            //Alarm
+            List<String> dataList = new List<String>();
+            ItemList = new ObservableCollection<AlarmTag>();
+
             Xamarin.Forms.Device.StartTimer(TimeSpan.FromSeconds(1), () =>
             {
                 MySCADA.Task task = App.Root.FindTask("Task_1");
@@ -134,7 +145,10 @@ namespace PumpStation_SCADA
                         running2Ellipse.Fill = _running ? Brush.Green : Brush.Gray;
                     }
                 }
-
+                //Alarm
+                alarmtags = new ObservableCollection<AlarmTag>();
+                Alarm alarms = App.Root.FindAlarm($"pressureAlarm_{_index}");
+                BindingContext = new AlarmTagVM(alarms.alarmTags.OrderByDescending(p => p.Timestamp).ToList());
                 return true;
             });
         }

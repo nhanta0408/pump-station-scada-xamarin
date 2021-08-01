@@ -97,6 +97,15 @@
                    FontAttributes="Bold"
                 VerticalOptions="Start"
                 HorizontalOptions="Center" />
+            <BoxView VerticalOptions="Start" HeightRequest="10" />
+            <ListView ItemsSource="{Binding AlarmTags}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Timestamp}"  Detail="{Binding Detail}"
+                                  TextColor="{Binding Color} " DetailColor="{Binding Color}" Height="50" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Trend" IconImageSource="icon_graph.png">

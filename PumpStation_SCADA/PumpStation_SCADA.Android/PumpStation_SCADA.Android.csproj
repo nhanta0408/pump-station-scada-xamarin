@@ -111,6 +111,12 @@
     <AndroidResource Include="Resources\drawable\axis.png" />
     <Content Include="Resources\drawable\icon_home.png" />
     <AndroidResource Include="Resources\drawable\icon_graph.png" />
+    <AndroidResource Include="Resources\drawable\waterStation.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadDebuggerTimeoutExceptionPumpStation_SCADAAndroidHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

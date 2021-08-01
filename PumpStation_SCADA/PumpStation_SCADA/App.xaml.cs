@@ -1,8 +1,5 @@
 ﻿using MySCADA;
-using PumpStation_SCADA.Views;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace PumpStation_SCADA
 {
@@ -15,12 +12,13 @@ namespace PumpStation_SCADA
             InitializeComponent();
 
             MainPage = new AppShell();
-             
+
             Root = new SCADA();
             PLC plc = new PLC();
-            Root.AddPLC(plc); 
+            Root.AddPLC(plc);
             Task Task1 = new Task("Task_1", 100);
             //Tạo các Tag
+
             #region TagDeclaration
 
             Tag PumpStation_1_Mode = new Tag("PumpStation_1_Mode", "PumpStation_1.Mode");
@@ -62,11 +60,13 @@ namespace PumpStation_SCADA
             Tag PumpStation_1_Running2 = new Tag("PumpStation_1_Running2", "PumpStation_1.Running2");
             Tag PumpStation_2_Running2 = new Tag("PumpStation_2_Running2", "PumpStation_2.Running2");
             Tag PumpStation_3_Running2 = new Tag("PumpStation_3_Running2", "PumpStation_3.Running2");
-            #endregion
+
+            #endregion TagDeclaration
 
             Root.AddTask(Task1);
 
             #region TagIsAddedIntoTheTask
+
             Task1.AddTag(PumpStation_1_Mode);
             Task1.AddTag(PumpStation_2_Mode);
             Task1.AddTag(PumpStation_3_Mode);
@@ -106,7 +106,9 @@ namespace PumpStation_SCADA
             Task1.AddTag(PumpStation_1_Running2);
             Task1.AddTag(PumpStation_2_Running2);
             Task1.AddTag(PumpStation_3_Running2);
-            #endregion
+
+            #endregion TagIsAddedIntoTheTask
+
             Root.RunTask("Task_1");
 
             //mainScreen = new MainScreen();
@@ -124,7 +126,15 @@ namespace PumpStation_SCADA
 
             Root.AddHistorian(pressureTimestampHistorian1);
             Root.AddHistorian(pressureTimestampHistorian2);
-            Root.AddHistorian(pressureTimestampHistorian3); 
+            Root.AddHistorian(pressureTimestampHistorian3);
+
+            Alarm pressureAlarm1 = new Alarm("pressureAlarm_1");
+            Alarm pressureAlarm2 = new Alarm("pressureAlarm_2");
+            Alarm pressureAlarm3 = new Alarm("pressureAlarm_3");
+
+            Root.AddAlarm(pressureAlarm1);
+            Root.AddAlarm(pressureAlarm2);
+            Root.AddAlarm(pressureAlarm3);
 
 
             PumpStationFaceplate pumpStation_1 = new PumpStationFaceplate(1);
@@ -135,15 +145,8 @@ namespace PumpStation_SCADA
             Root.AddFaceplate(pumpStation_2);
             Root.AddFaceplate(pumpStation_3);
 
-            
-
-            //Alarm levelAlarm = new Alarm("Level");
-            //Root.AddAlarm(levelAlarm);
-
             //MainPage = new NavigationPage(new MainScreen());
             MainPage = new AppShell();
-
-
         }
 
         protected override void OnStart()

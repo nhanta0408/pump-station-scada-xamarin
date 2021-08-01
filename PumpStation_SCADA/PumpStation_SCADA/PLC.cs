@@ -61,9 +61,17 @@ namespace MySCADA
                 pressureTimestampHistorian2.ringBuffer.Enqueue(DateTime.Now);
                 pressureTimestampHistorian3.ringBuffer.Enqueue(DateTime.Now);
 
-                //Alarm levelAlarm = Parent.FindAlarm("Level");
-                //AlarmTag levelAlarmTag = new AlarmTag("Level", DateTime.Now, Level, " "); //Chưa so sánh nên chưa biết alarm code
-                //levelAlarm.CheckAlarmLevel(levelAlarmTag);
+                Alarm pressureAlarm1 = Parent.FindAlarm("pressureAlarm_1");
+                Alarm pressureAlarm2 = Parent.FindAlarm("pressureAlarm_2");
+                Alarm pressureAlarm3 = Parent.FindAlarm("pressureAlarm_3");
+
+                AlarmTag pressureAlarmTag1 = new AlarmTag("pressureAlarm_1", DateTime.Now, pressure1, " "); //Chưa so sánh nên chưa biết alarm code
+                AlarmTag pressureAlarmTag2 = new AlarmTag("pressureAlarm_2", DateTime.Now, pressure2, " "); //Chưa so sánh nên chưa biết alarm code
+                AlarmTag pressureAlarmTag3 = new AlarmTag("pressureAlarm_3", DateTime.Now, pressure3, " "); //Chưa so sánh nên chưa biết alarm code
+
+                pressureAlarm1.CheckAlarmLevel(pressureAlarmTag1);
+                pressureAlarm2.CheckAlarmLevel(pressureAlarmTag2);
+                pressureAlarm3.CheckAlarmLevel(pressureAlarmTag3);
             }
         }
 

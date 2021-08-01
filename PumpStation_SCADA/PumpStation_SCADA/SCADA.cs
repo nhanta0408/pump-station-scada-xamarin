@@ -129,24 +129,24 @@ namespace MySCADA
         //    Graph.Add(levelGraph);
         //}
 
-        //public void AddAlarm(Alarm alarm)
-        //{
-        //    alarm.Parent = this;
-        //    Alarms.Add(alarm);
-        //}
-        //public Alarm FindAlarm(string name)
-        //{
-        //    Alarm result = null;
-        //    foreach (var item in Alarms)
-        //    {
-        //        var temp = (Alarm)item;
-        //        if (temp.Name == name)
-        //        {
-        //            result = temp;
-        //        }
-        //    }
-        //    return result;
-        //}
+        public void AddAlarm(Alarm alarm)
+        {
+            alarm.Parent = this;
+            Alarms.Add(alarm);
+        }
+        public Alarm FindAlarm(string name)
+        {
+            Alarm result = null;
+            foreach (var item in Alarms)
+            {
+                var temp = (Alarm)item;
+                if (temp.Name == name)
+                {
+                    result = temp;
+                }
+            }
+            return result;
+        }
 
         //Khong biet
         //public void AddAlarmDisplay(AlarmDisplay alarmDisplay)

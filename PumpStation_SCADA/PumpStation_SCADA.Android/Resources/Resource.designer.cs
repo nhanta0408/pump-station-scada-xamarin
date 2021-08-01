@@ -14500,7 +14500,10 @@ namespace PumpStation_SCADA.Droid
 			public const int tooltip_frame_light = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int xamarin_logo = 2131165355;
+			public const int waterStation = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int xamarin_logo = 2131165356;
 			
 			static Drawable()
 			{
