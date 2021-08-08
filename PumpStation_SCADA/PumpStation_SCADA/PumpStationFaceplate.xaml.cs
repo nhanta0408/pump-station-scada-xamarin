@@ -100,8 +100,25 @@ namespace PumpStation_SCADA
                     if (tagPressure != null)
                     {
                         float _pressure = tagPressure.Value;
-                        pressureText.Text = _pressure.ToString() + " bar";
+                        pressureText.Text = _pressure.ToString() + " bar(s)";
+                        pressureProgressBar.Progress = Convert.ToDouble(_pressure/10.0);
+                        if(_pressure < 1)
+                        {
+                            pressureText.TextColor = Color.Red;
+                            pressureProgressBar.ProgressColor = Color.Red;
+                        }
+                        else if(_pressure > 1 && _pressure < 8)
+                        {
+                            pressureText.TextColor = Color.Blue;
+                            pressureProgressBar.ProgressColor = Color.Blue;
 
+                        }
+                        else
+                        {
+                            pressureText.TextColor = Color.Red;
+                            pressureProgressBar.ProgressColor = Color.Red;
+
+                        }
                         if (_preRear != pressureHistorian.ringBuffer.rear)
                         {
                             float currentPressure = pressureHistorian.ringBuffer.Peek();

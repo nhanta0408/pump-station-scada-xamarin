@@ -11,14 +11,14 @@
     <!--Pages can be added as references or inline-->
     <ContentPage Title="Control" IconImageSource="icon_setting.png">
         <StackLayout Orientation="Vertical">
-            <BoxView VerticalOptions="Start" HeightRequest="30" />
+            <BoxView VerticalOptions="Start" HeightRequest="20" />
             <Label x:Name="stationTitle" Text="CONTROL"
                    TextColor="Black"
                    FontSize="35"
                    FontAttributes="Bold"
                 VerticalOptions="Start"
                 HorizontalOptions="Center" />
-            <BoxView VerticalOptions="Start" HeightRequest="20" />
+            <BoxView VerticalOptions="Start" HeightRequest="15" />
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
                 <Label  Text="Mode: "
                        FontSize="25"
@@ -73,7 +73,7 @@
                     <BoxView HeightRequest="30" />
                 </StackLayout>
             </StackLayout>
-            <BoxView  HeightRequest="20" />
+            <BoxView  HeightRequest="10" />
             <Label Text="PRESSURE"
                    TextColor="Black"
                    FontSize="25"
@@ -86,6 +86,11 @@
                    FontAttributes="Bold"
                 VerticalOptions="Start"
                 HorizontalOptions="Center" />
+            <BoxView  HeightRequest="10" />
+            <ProgressBar x:Name="pressureProgressBar" WidthRequest="200" ScaleY="6" VerticalOptions="Center"
+                HorizontalOptions="Center" />
+            <Label Text="            0                                         10 bar(s)" VerticalOptions="Center"
+                HorizontalOptions="Center" FontSize="18"/>
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Alarm" IconImageSource="icon_alarm.png">
